@@ -8,7 +8,7 @@ addons:
 cache: npm
 
 script:
-  - pip -V
+  - pip3 -V
   - npm run lint
   - npm run test
   - npm run e2e
