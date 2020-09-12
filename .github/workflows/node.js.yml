@@ -15,21 +15,21 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Configure AWS
-    - uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
     - name: Use Node.js
-    - uses: actions/setup-node@v1
+      uses: actions/setup-node@v1
       with:
         node-version: '14.x'
-    - run: |
+      run: |
         npm ci
         npm test
         npm run e2e
         npm run build
 
     - name: Deploy to S3
-    - run: aws sync ./dist/michaelpassarge-dev s3://${{ secrets.AWS_BUCKET }} --delete
+      run: aws sync ./dist/michaelpassarge-dev s3://${{ secrets.AWS_BUCKET }} --delete
