@@ -29,9 +29,8 @@ jobs:
     - name: Run install, tests, build
       run: |
         npm ci
-        npm test
-        npm run e2e
+        npm ci:test
         npm run build
 
     - name: Deploy to S3
-      run: aws s3 sync ./dist/michaelpassarge-dev s3://${{ secrets.AWS_BUCKET }} --delete
+      run: aws s3 sync ./build s3://${{ secrets.AWS_BUCKET }} --delete
