@@ -1,0 +1,19 @@
+.nav-wrapper {
+    border: 1px solid red;
+    height: 10vh;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.nav li {
+    padding: 10px;
+    background-color: red;
+    border: 1px solid black;
+    margin: 5px;
+}
