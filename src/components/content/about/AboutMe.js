@@ -3,9 +3,7 @@ import './AboutMe.css'
 const AboutMe = () => {
     return (
         <div className="about-container">
-            <p>
-            Collaborative team player with a solid background in Object-oriented programming seeking Software Engineer. Passionate Software Engineer with innovative thinking and a drive for continuous learning. Broad experience in Continuous Integration and Delivery. Proven and respected leader who possesses communication, organization, and time management skills.
-            </p>
+            <p>I am Software Engineer with a passion for problem solving! I have a sound background in Backend programming while rounding out my skills with the Frontend. I like to automate mundane manual tasks. And I have an abundance of experience in Continuous Ingegration and Delivery.</p>
         </div>
     );
 };
